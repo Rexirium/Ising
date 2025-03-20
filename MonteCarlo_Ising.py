@@ -160,7 +160,7 @@ class Result:  # define a class result to save averaged results of may round of 
         self.varsq=varsq
 
 # Averaging the results with N_sample round of MCMC
-def Mean_result(Lx:int,Ly:int,T_ini:float,N_sample:int,J_int,h_ext,initial='random',method='MC',MkvL=None,retstat=False):
+def Mean_result(Lx:int,Ly:int,T_ini:float,N_sample:int,J_int,h_ext,initial='random',method='MC',MkvL=None):
     total_energy,total_moment,total_square=0.,0.,0.
     for i in range(N_sample):
         energy,moment=getsample(Lx,Ly,T_ini,J_int,h_ext,initial,method,MkvL)
